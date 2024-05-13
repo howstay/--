@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>倒计时</title>
+    </head>
+    <body>
+        <h1 id="date"></h1>
+        <h1>距离祖国八十周年生日还有<span id="cutdown">&nbsp;</span>天</h1>
+        <span id="msg"></span>
+        <script>
+            window.onload=showDateTime;  //页面加载时触发showDateTime函数，在页面显示时间及倒计时
+            //显示时间及倒计时
+            function showDateTime(){
+               var myDate= /*补充*/                     //获取当前时间
+               var sYear=  /*补充*/                     //获取当前时间的年份
+               var sMonth= /*补充*/                     //获取当前时间的月份
+               var sDay=   /*补充*/                     //获取当前时间的日期
+               var h=      /*补充*/                     //获取当前时间的小时
+               var m=      /*补充*/                     //获取当前时间的分钟
+               var s=      /*补充*/                     //获取当前时间的秒数
+               h=formatTwoDigits(h);            //将小时数按两位显示
+               m=formatTwoDigits(m);            //将分钟数按两位显示
+               s=formatTwoDigits(s);            //将秒数按两位显示
+               document.getElementById("date").innerHTML= /*补充*/       //在h1元素中显示时间
+               setTimeout("showDateTime()",1000);  //计时器，每一秒钟调用其所在的函数，以达到实时显示时间
+               var nationalDay=new Date("2029/10/1");
+               document.getElementById("cutdown").innerHTML=  /*补充*/    //计算倒计时天数
+               document.getElementById("msg").innerHTML=(imageDigits(h)+"<img src='images/dot.png'>"+imageDigits(m)+"<img src='images/dot.png'>"+imageDigits(s)+"<br>"); //以图片方式显示时间
+            }
+            //时分秒补足两位
+            function formatTwoDigits(s){
+            /*    
+               补充 
+            */
+            }
+            
+            //将数字转换为图像（选填，可以通过获取图片文件名称的方式显示对应数字图片）
+            function imageDigits(s){
+            /*    
+               补充 
+            */
+            }
+        </script>
+    </body>
+</html>
